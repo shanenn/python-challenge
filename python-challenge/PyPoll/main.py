@@ -18,6 +18,8 @@ with open(csv_path,"r",) as file:
             cand_dict[row[2]] += 1
 
 # write to txt and print results
+if not os.path.exists('analysis'):
+    os.mkdir('analysis')
 txt_path = os.path.join("analysis","results.txt")
 with open (txt_path, "w") as file:
     file.write("Election Results\n")
