@@ -33,7 +33,7 @@ with open(csv_path,"r",) as file:
 ana = [num_month,total,profits/(num_month-1),[smalldate,small],[largedate,large]]   # list of results for easy reference
 
 # write to txt and print results
-if not os.path.exists('analysis'):
+if not os.path.exists('analysis'):                    # check if analysis dir exists, if not create directory
     os.mkdir('analysis')
 txt_path = os.path.join("analysis","results.txt")
 with open (txt_path, "w") as file:
